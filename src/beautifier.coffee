@@ -115,9 +115,6 @@ module.exports = (tree) ->
       e.toLess(env)
     .join if env.compress then ',' else ', '
 
-  tree.Shorthand.prototype.toLess = (env) ->
-    @a.toLess(env) + "/" +@b.toLess(env)
-
   tree.Comment.prototype.toLess = (env) ->
     @toCSS env
 
